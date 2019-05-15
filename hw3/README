@@ -1,0 +1,39 @@
+# DIP Homework Assignment #3
+# 05/02/2018
+# Name: ¬x¯Eµ¾
+# ID: B04902028
+# email: b04902028@ntu.edu.tw
+# compiled on ubuntu 16.04.3 LTS with g++11 
+# output name and file is decided, so no need to change
+# image path should be "../raw/*.raw" and output image will be here as well
+# type make -f README to compile and run
+# below is for makefile 
+ 
+.PHONY: all
+
+CC=g++  
+LN=g++
+All: prob1 prob2 prob3
+prob1 : 
+	@echo "hw3-1" 
+	@echo "compiling and linking the code"
+	$(CC) -std=c++11 -c hw3.cpp main.cpp 
+	$(LN) -std=c++11 -o hw3-1 hw3.o main.o 
+	@echo "running the program"
+	./hw3-1
+
+prob2 : 
+	@echo "hw3-2" 
+	@echo "compiling and linking the code"
+	$(CC) -std=c++11 -c hw3-2.cpp main2.cpp 
+	$(LN) -std=c++11 -o hw3-2 hw3-2.o main2.o 
+	@echo "running the program"
+	./hw3-2
+
+prob3 : 
+	@echo "hw3-3" 
+	@echo "compiling and linking the code"
+	$(CC) -std=c++11 -c hw3-3.cpp main3.cpp 
+	$(LN) -std=c++11 -o hw3-3 hw3-3.o main3.o 
+	@echo "running the program"
+	./hw3-3
