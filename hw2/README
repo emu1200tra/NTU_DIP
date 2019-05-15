@@ -1,0 +1,30 @@
+# DIP Homework Assignment #2
+# 04/11/2018
+# Name: ¬x¯Eµ¾
+# ID: B04902028
+# email: b04902028@ntu.edu.tw
+# compiled on ubuntu 16.04.3 LTS with g++11 
+# output name and file is decided, so no need to change
+# image path should be "../raw/*.raw" and output image will be here as well
+# type make -f README to compile and run
+# below is for makefile 
+ 
+.PHONY: all
+
+CC=g++  
+LN=g++
+All: prob1 prob2
+prob1 : 
+	@echo "hw2" 
+	@echo "compiling and linking the code"
+	$(CC) -std=c++11 -c hw2.cpp 
+	$(LN) -std=c++11 -o hw2 hw2.o 
+	@echo "running the program"
+	./hw2
+prob2 : 
+	@echo "hw2-1" 
+	@echo "compiling and linking the code"
+	$(CC) -std=c++11 -c hw2-1.cpp 
+	$(LN) -std=c++11 -o hw2-1 hw2-1.o 
+	@echo "running the program"
+	./hw2-1
